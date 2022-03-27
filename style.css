@@ -1,4 +1,5 @@
 /* Coded by Sami Elsayed */
+
 :root {
     --font-color: #2d3436;
     --body-bg-color: #f7f1e3;
@@ -36,7 +37,7 @@ body {
     border-radius: 5%;
 }
 
-/* make it inline-block so that `h2::after` will only span the length of the `h2` and not the whole row */
+/* Make it inline-block so that `h2::after` will only span the length of the `h2` and not the whole row */
 
 h2 {
     margin-bottom: 40px;
@@ -51,14 +52,14 @@ h2::after {
     width: auto;
 }
 
-/* make the `header` a flex container to easily stack our elements in a column and automatically space them with `space-between` */
+/* Make the `header` a flex container to easily stack the elements in a column and automatically space them with `space-between` */
 
 header {
     display: flex;
     justify-content: space-between;
 }
 
-/* give some simple styling to our `input` tag */
+/* Give some simple styling to the `input` tag */
 
 header input {
     min-height: 40px;
@@ -75,7 +76,7 @@ header button {
     font-size: 2rem;
 }
 
-/* make the `li` stretch the whole width and add some border to it*/
+/* Make the `li` stretch the whole width and add some border to it */
 
 li {
     width: 100%;
@@ -101,7 +102,7 @@ li .buttons button {
     font-size: 2rem;
 }
 
-/* apply a different style to the completed tasks */
+/* Apply a different style to the completed tasks */
 
 .completed li {
     background-color: var(--done-bg-color);
@@ -115,13 +116,13 @@ svg {
     max-width: 25px;
 }
 
-/* define the normal color */
+/* Define the normal color */
 
 svg path {
     fill: var(--svg-normal-color);
 }
 
-/* change the color when we hover the icons*/
+/* Change the color when user hover the icons*/
 
 button:hover svg path {
     fill: var(--svg-hover-color);
@@ -134,7 +135,7 @@ button:hover svg path {
 }
 
 
-/* make the remove icon a different color on hover */
+/* Make the remove icon a different color on hover */
 
 .remove:hover svg path {
     fill: var(--svg-remove-hover-color)
