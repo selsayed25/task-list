@@ -1,0 +1,141 @@
+/* Coded by Sami Elsayed */
+:root {
+    --font-color: #2d3436;
+    --body-bg-color: #f7f1e3;
+    --container-bg-color: #55efc4;
+    --todo-bg-color: #00b894;
+    --done-bg-color: #2ed573;
+    --svg-normal-color: #2d3436;
+    --svg-hover-color: #0984e3;
+    --svg-complete-color: #0984e3;
+    --svg-remove-color: #d63031;
+    --svg-remove-hover-color: #ff4757;
+}
+
+* {
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    color: var(--font-color);
+}
+
+body {
+    background-color: var(--body-bg-color);
+    display: flex;
+    justify-content: center;
+}
+
+#container {
+    background-color: var(--container-bg-color);
+    padding: 2%;
+    min-height: 30vh;
+    min-width: 30vw;
+    width: auto;
+    height: auto;
+    margin-top: 10vh;
+    border-radius: 5%;
+}
+
+/* make it inline-block so that `h2::after` will only span the length of the `h2` and not the whole row */
+
+h2 {
+    margin-bottom: 40px;
+    margin-top: 40px;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    border-bottom: 5px solid black;
+    display: block;
+    width: auto;
+}
+
+/* make the `header` a flex container to easily stack our elements in a column and automatically space them with `space-between` */
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* give some simple styling to our `input` tag */
+
+header input {
+    min-height: 40px;
+    width: 100%;
+    border: none;
+    padding-left: 5%;
+    background-color: var(--body-bg-color);
+}
+
+header button {
+    min-width: 40px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+}
+
+/* make the `li` stretch the whole width and add some border to it*/
+
+li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: var(--todo-bg-color);
+    padding: 2%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+li .buttons {
+    min-width: 100px;
+    margin-left: auto;
+    display: inline;
+}
+
+li .buttons button {
+    background: none;
+    min-width: 40px;
+    border: none;
+    font-size: 2rem;
+}
+
+/* apply a different style to the completed tasks */
+
+.completed li {
+    background-color: var(--done-bg-color);
+}
+
+.completed .complete svg path {
+    fill: var(--svg-complete-color);
+}
+
+svg {
+    max-width: 25px;
+}
+
+/* define the normal color */
+
+svg path {
+    fill: var(--svg-normal-color);
+}
+
+/* change the color when we hover the icons*/
+
+button:hover svg path {
+    fill: var(--svg-hover-color);
+}
+
+/* make the remove icon red*/
+
+.remove svg path {
+    fill: var(--svg-remove-color);
+}
+
+
+/* make the remove icon a different color on hover */
+
+.remove:hover svg path {
+    fill: var(--svg-remove-hover-color)
+}
